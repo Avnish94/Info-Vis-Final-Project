@@ -32,7 +32,7 @@
       <connection class='federated'>
         <named-connections>
           <named-connection caption='CW_HistoricalEmissions_PIK' name='textscan.15xzyf21343x4h1a8tqoj18skl2k'>
-            <connection class='textclean' cleaning='yes' compat='no' csvFile='C:/Users/dhruv/Desktop/CW_HistoricalEmissions_PIK.csv' dataRefreshTime='' directory='C:/Users/dhruv/Desktop' filename='C:/Users/dhruv/AppData/Local/Temp/TableauTemp/16thx4y13a00lv19qcauc1l2ncza/CW_HistoricalEmissions_PIK.csv.xlsx' interpretationMode='8' password='' server='' validate='no' />
+            <connection class='textclean' cleaning='yes' compat='no' csvFile='C:/Users/dhruv/Desktop/CW_HistoricalEmissions_PIK.csv' dataRefreshTime='' directory='C:/Users/dhruv/Desktop' filename='C:/Users/dhruv/AppData/Local/Temp/TableauTemp/1y78hfy1urs5ll1cb8rol1o9cnb5/CW_HistoricalEmissions_PIK.csv.xlsx' interpretationMode='8' password='' server='' validate='no' />
           </named-connection>
         </named-connections>
         <_.fcp.ObjectModelEncapsulateLegacy.false...relation connection='textscan.15xzyf21343x4h1a8tqoj18skl2k' name='CW_HistoricalEmissions_PIK.csv' table='[CW_HistoricalEmissions_PI#csv$]' type='table'>
@@ -3422,12 +3422,12 @@
             <datasource caption='CW_HistoricalEmissions_GCP' name='federated.0kqygi51637qds13vex7o1vs72hu' />
           </datasources>
           <datasource-dependencies datasource='federated.0kqygi51637qds13vex7o1vs72hu'>
-            <column datatype='real' name='[2015]' role='measure' type='quantitative' />
+            <column datatype='real' name='[2017]' role='measure' type='quantitative' />
             <column datatype='string' name='[gas]' role='dimension' type='nominal' />
             <column-instance column='[gas]' derivation='None' name='[none:gas:nk]' pivot='key' type='nominal' />
             <column-instance column='[sector]' derivation='None' name='[none:sector:nk]' pivot='key' type='nominal' />
             <column datatype='string' name='[sector]' role='dimension' type='nominal' />
-            <column-instance column='[2015]' derivation='Sum' name='[sum:2015:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[2017]' derivation='Sum' name='[sum:2017:qk]' pivot='key' type='quantitative' />
           </datasource-dependencies>
           <filter class='categorical' column='[federated.0kqygi51637qds13vex7o1vs72hu].[none:gas:nk]'>
             <groupfilter function='union' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate'>
@@ -3448,8 +3448,8 @@
           <aggregation value='true' />
         </view>
         <style>
-          <style-rule element='mark'>
-            <encoding attr='size-bar' field='[federated.0kqygi51637qds13vex7o1vs72hu].[sum:2015:qk]' field-type='quantitative' max-size='1' min-size='0.005' type='centersize' />
+          <style-rule element='axis'>
+            <format attr='display' class='0' field='[federated.0kqygi51637qds13vex7o1vs72hu].[sum:2017:qk]' scope='rows' value='false' />
           </style-rule>
         </style>
         <panes>
@@ -3463,7 +3463,7 @@
             </encodings>
           </pane>
         </panes>
-        <rows>[federated.0kqygi51637qds13vex7o1vs72hu].[sum:2015:qk]</rows>
+        <rows>[federated.0kqygi51637qds13vex7o1vs72hu].[sum:2017:qk]</rows>
         <cols>([federated.0kqygi51637qds13vex7o1vs72hu].[none:sector:nk] / [federated.0kqygi51637qds13vex7o1vs72hu].[none:gas:nk])</cols>
       </table>
       <simple-id uuid='{45E743AC-D259-41F0-80B7-C5789C8990F7}' />
@@ -3475,12 +3475,12 @@
             <datasource caption='CW_HistoricalEmissions_GCP' name='federated.0kqygi51637qds13vex7o1vs72hu' />
           </datasources>
           <datasource-dependencies datasource='federated.0kqygi51637qds13vex7o1vs72hu'>
-            <column datatype='real' name='[2016]' role='measure' type='quantitative' />
+            <column datatype='real' name='[2017]' role='measure' type='quantitative' />
             <column datatype='string' name='[gas]' role='dimension' type='nominal' />
             <column-instance column='[gas]' derivation='None' name='[none:gas:nk]' pivot='key' type='nominal' />
             <column-instance column='[sector]' derivation='None' name='[none:sector:nk]' pivot='key' type='nominal' />
             <column datatype='string' name='[sector]' role='dimension' type='nominal' />
-            <column-instance column='[2016]' derivation='Sum' name='[sum:2016:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[2017]' derivation='Sum' name='[sum:2017:qk]' pivot='key' type='quantitative' />
           </datasource-dependencies>
           <filter class='categorical' column='[federated.0kqygi51637qds13vex7o1vs72hu].[none:gas:nk]'>
             <groupfilter function='union' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate'>
@@ -3512,7 +3512,7 @@
             </encodings>
           </pane>
         </panes>
-        <rows>[federated.0kqygi51637qds13vex7o1vs72hu].[sum:2016:qk]</rows>
+        <rows>[federated.0kqygi51637qds13vex7o1vs72hu].[sum:2017:qk]</rows>
         <cols>([federated.0kqygi51637qds13vex7o1vs72hu].[none:sector:nk] / [federated.0kqygi51637qds13vex7o1vs72hu].[none:gas:nk])</cols>
       </table>
       <simple-id uuid='{751AB6F7-746D-4237-8C1E-F401C3A3B56D}' />
@@ -3524,102 +3524,10 @@
       <size maxheight='800' maxwidth='1000' minheight='800' minwidth='1000' />
       <zones>
         <zone h='100000' id='4' type-v2='layout-basic' w='100000' x='0' y='0'>
-          <zone h='98000' id='8' param='horz' type-v2='layout-flow' w='98400' x='800' y='1000'>
-            <zone h='98000' id='6' type-v2='layout-basic' w='98400' x='800' y='1000'>
-              <zone h='98000' id='5' name='Sheet 1' w='7900' x='91300' y='1000'>
-                <zone-style>
-                  <format attr='border-color' value='#000000' />
-                  <format attr='border-style' value='none' />
-                  <format attr='border-width' value='0' />
-                  <format attr='margin' value='4' />
-                </zone-style>
-              </zone>
-              <zone forceUpdate='true' h='98000' id='10' param='[com.appsfortableau.extensions.show-me-more].[0.1.0].[https://extensions.appsfortableau.com/login/i59GWUukY7gWHm6hKCoC%2BFbxJzMkzSbw%2BvzydYMrPgtGVH265SU5hGI46sTdi2RaSRpQM2UPenrAHlbHLJRcr%2BisQ2%2B5bKibags5O791jeNX7Kk9BnTKSahUlyNR5Q6Aky6wjLNDnX86A2R%2BGvjJqg%3D%3D]' type-v2='dashboard-object' w='90500' x='800' y='1000'>
-                <add-in add-in-id='com.appsfortableau.extensions.show-me-more' extension-url='https://extensions.appsfortableau.com/login/i59GWUukY7gWHm6hKCoC%2BFbxJzMkzSbw%2BvzydYMrPgtGVH265SU5hGI46sTdi2RaSRpQM2UPenrAHlbHLJRcr%2BisQ2%2B5bKibags5O791jeNX7Kk9BnTKSahUlyNR5Q6Aky6wjLNDnX86A2R%2BGvjJqg%3D%3D' extension-version='0.1.0' instance-id='AB89E31B20A949039EDA249F9E0E3ADC'>
-                  <instance-settings>
-                    <setting key='backgroundColor' value='#FFFFFF' />
-                    <setting key='colorScheme' value='[&quot;#4e79a7&quot;,&quot;#a0cbe8&quot;,&quot;#f28e2b&quot;,&quot;#ffbe7d&quot;,&quot;#59a14f&quot;,&quot;#8cd17d&quot;,&quot;#b6992d&quot;,&quot;#f1ce63&quot;,&quot;#499894&quot;,&quot;#86bcb6&quot;,&quot;#e15759&quot;,&quot;#ff9d9a&quot;,&quot;#79706e&quot;,&quot;#bab0ac&quot;,&quot;#d37295&quot;,&quot;#fabfd2&quot;,&quot;#b07aa1&quot;,&quot;#d4a6c8&quot;,&quot;#9d7660&quot;,&quot;#d7b5a6&quot;]' />
-                    <setting key='convertedToNewActions' value='true' />
-                    <setting key='dashboardActions' value='[]' />
-                    <setting key='dimensionColors' value='[{&quot;fieldName&quot;:&quot;sector&quot;,&quot;color&quot;:&quot;#59A14F&quot;},{&quot;fieldName&quot;:&quot;gas&quot;,&quot;color&quot;:&quot;#E15759&quot;}]' />
-                    <setting key='dimensions' value='[&quot;sector&quot;,&quot;gas&quot;]' />
-                    <setting key='divergingColorScheme' value='[null,null,null,[&quot;#d8b365&quot;,&quot;#f5f5f5&quot;,&quot;#5ab4ac&quot;],[&quot;#a6611a&quot;,&quot;#dfc27d&quot;,&quot;#80cdc1&quot;,&quot;#018571&quot;],[&quot;#a6611a&quot;,&quot;#dfc27d&quot;,&quot;#f5f5f5&quot;,&quot;#80cdc1&quot;,&quot;#018571&quot;],[&quot;#8c510a&quot;,&quot;#d8b365&quot;,&quot;#f6e8c3&quot;,&quot;#c7eae5&quot;,&quot;#5ab4ac&quot;,&quot;#01665e&quot;],[&quot;#8c510a&quot;,&quot;#d8b365&quot;,&quot;#f6e8c3&quot;,&quot;#f5f5f5&quot;,&quot;#c7eae5&quot;,&quot;#5ab4ac&quot;,&quot;#01665e&quot;],[&quot;#8c510a&quot;,&quot;#bf812d&quot;,&quot;#dfc27d&quot;,&quot;#f6e8c3&quot;,&quot;#c7eae5&quot;,&quot;#80cdc1&quot;,&quot;#35978f&quot;,&quot;#01665e&quot;],[&quot;#8c510a&quot;,&quot;#bf812d&quot;,&quot;#dfc27d&quot;,&quot;#f6e8c3&quot;,&quot;#f5f5f5&quot;,&quot;#c7eae5&quot;,&quot;#80cdc1&quot;,&quot;#35978f&quot;,&quot;#01665e&quot;],[&quot;#543005&quot;,&quot;#8c510a&quot;,&quot;#bf812d&quot;,&quot;#dfc27d&quot;,&quot;#f6e8c3&quot;,&quot;#c7eae5&quot;,&quot;#80cdc1&quot;,&quot;#35978f&quot;,&quot;#01665e&quot;,&quot;#003c30&quot;],[&quot;#543005&quot;,&quot;#8c510a&quot;,&quot;#bf812d&quot;,&quot;#dfc27d&quot;,&quot;#f6e8c3&quot;,&quot;#f5f5f5&quot;,&quot;#c7eae5&quot;,&quot;#80cdc1&quot;,&quot;#35978f&quot;,&quot;#01665e&quot;,&quot;#003c30&quot;]]' />
-                    <setting key='enableLegend' value='true' />
-                    <setting key='excludeValues' value='false' />
-                    <setting key='extraSettings' value='[&quot;value&quot;,&quot;input&quot;,&quot;92&quot;,&quot;3&quot;,&quot;1&quot;,&quot;62&quot;,&quot;100&quot;,&quot;sankeyCenter&quot;,&quot;0&quot;,0,&quot;inside&quot;,&quot;1&quot;,&quot;valueHighToLow&quot;,&quot;valueHighToLow&quot;,&quot;1&quot;,&quot;1&quot;]' />
-                    <setting key='filterDimension' value='[]' />
-                    <setting key='filterSheets' value='[]' />
-                    <setting key='fontFamily' value='Arial, sans-serif' />
-                    <setting key='fontSize' value='1' />
-                    <setting key='fontSizeG' value='1' />
-                    <setting key='inputColor' value='#53A9CB' />
-                    <setting key='labels' value='{&quot;fromLink&quot;:{&quot;enabled&quot;:false,&quot;content&quot;:&quot;&lt;PercentOfSource&gt;&quot;},&quot;toLink&quot;:{&quot;enabled&quot;:false,&quot;content&quot;:&quot;&lt;PercentOfTarget&gt;&quot;},&quot;node&quot;:{&quot;enabled&quot;:1,&quot;content&quot;:&quot;&lt;DimensionValue&gt;&quot;}}' />
-                    <setting key='legendColumns' value='1' />
-                    <setting key='legendPaddingX' value='0' />
-                    <setting key='legendPaddingY' value='0' />
-                    <setting key='legendPosition' value='&quot;right&quot;' />
-                    <setting key='legendRows' value='2' />
-                    <setting key='legendTitle' value='&quot;&quot;' />
-                    <setting key='legendType' value='&quot;color&quot;' />
-                    <setting key='linkColor' value='#CCFF66' />
-                    <setting key='measure' value='SUM(2015)' />
-                    <setting key='measureFormat' value='' />
-                    <setting key='measureStyle' value='{&quot;style&quot;:&quot;decimal&quot;,&quot;maximumFractionDigits&quot;:2,&quot;prefix&quot;:&quot;&quot;,&quot;suffix&quot;:&quot;&quot;,&quot;unit&quot;:&quot;&quot;,&quot;displayUnits&quot;:&quot;none&quot;,&quot;useGrouping&quot;:true}' />
-                    <setting key='memberColors' value='[{&quot;fieldName&quot;:&quot;Agriculture&quot;,&quot;color&quot;:&quot;#59A14F&quot;},{&quot;fieldName&quot;:&quot;Energy&quot;,&quot;color&quot;:&quot;#E15759&quot;},{&quot;fieldName&quot;:&quot;Industrial Processes and Product Use&quot;,&quot;color&quot;:&quot;#4E79A7&quot;},{&quot;fieldName&quot;:&quot;Other&quot;,&quot;color&quot;:&quot;#F28E2B&quot;},{&quot;fieldName&quot;:&quot;Waste&quot;,&quot;color&quot;:&quot;#EDC948&quot;},{&quot;fieldName&quot;:&quot;N2O&quot;,&quot;color&quot;:&quot;#B07AA1&quot;},{&quot;fieldName&quot;:&quot;CO2&quot;,&quot;color&quot;:&quot;#469c00&quot;},{&quot;fieldName&quot;:&quot;CH4&quot;,&quot;color&quot;:&quot;#BAB0AC&quot;},{&quot;fieldName&quot;:&quot;F-Gas&quot;,&quot;color&quot;:&quot;#59A14F&quot;}]' />
-                    <setting key='memberColorsSunburst' value='[]' />
-                    <setting key='outputColor' value='#CCFF66' />
-                    <setting key='scaleLegendColor' value='&quot;#59A14F&quot;' />
-                    <setting key='scaleLegendItems' value='3' />
-                    <setting key='scaleLegendOrder' value='&quot;high-low&quot;' />
-                    <setting key='selectedSheet' value='Sheet 1' />
-                    <setting key='selectedViz' value='sankey-diagram' />
-                    <setting key='sequentialColorScheme' value='[null,null,null,[&quot;#d8b365&quot;,&quot;#f5f5f5&quot;,&quot;#5ab4ac&quot;],[&quot;#a6611a&quot;,&quot;#dfc27d&quot;,&quot;#80cdc1&quot;,&quot;#018571&quot;],[&quot;#a6611a&quot;,&quot;#dfc27d&quot;,&quot;#f5f5f5&quot;,&quot;#80cdc1&quot;,&quot;#018571&quot;],[&quot;#8c510a&quot;,&quot;#d8b365&quot;,&quot;#f6e8c3&quot;,&quot;#c7eae5&quot;,&quot;#5ab4ac&quot;,&quot;#01665e&quot;],[&quot;#8c510a&quot;,&quot;#d8b365&quot;,&quot;#f6e8c3&quot;,&quot;#f5f5f5&quot;,&quot;#c7eae5&quot;,&quot;#5ab4ac&quot;,&quot;#01665e&quot;],[&quot;#8c510a&quot;,&quot;#bf812d&quot;,&quot;#dfc27d&quot;,&quot;#f6e8c3&quot;,&quot;#c7eae5&quot;,&quot;#80cdc1&quot;,&quot;#35978f&quot;,&quot;#01665e&quot;],[&quot;#8c510a&quot;,&quot;#bf812d&quot;,&quot;#dfc27d&quot;,&quot;#f6e8c3&quot;,&quot;#f5f5f5&quot;,&quot;#c7eae5&quot;,&quot;#80cdc1&quot;,&quot;#35978f&quot;,&quot;#01665e&quot;],[&quot;#543005&quot;,&quot;#8c510a&quot;,&quot;#bf812d&quot;,&quot;#dfc27d&quot;,&quot;#f6e8c3&quot;,&quot;#c7eae5&quot;,&quot;#80cdc1&quot;,&quot;#35978f&quot;,&quot;#01665e&quot;,&quot;#003c30&quot;],[&quot;#543005&quot;,&quot;#8c510a&quot;,&quot;#bf812d&quot;,&quot;#dfc27d&quot;,&quot;#f6e8c3&quot;,&quot;#f5f5f5&quot;,&quot;#c7eae5&quot;,&quot;#80cdc1&quot;,&quot;#35978f&quot;,&quot;#01665e&quot;,&quot;#003c30&quot;]]' />
-                    <setting key='sourceColor' value='#e72168' />
-                    <setting key='targetColor' value='#183C92' />
-                    <setting key='textColor' value='#ffffff' />
-                    <setting key='textColorAxis' value='#666666' />
-                    <setting key='textColorGrid' value='#666666' />
-                    <setting key='textColorHeader' value='#666666' />
-                    <setting key='textColorLinks' value='#FFFFFF' />
-                    <setting key='tooltips' value='{&quot;link&quot;:&quot;&lt;MeasureName&gt;: &lt;MeasureValue&gt;\n&lt;PercentOfSource&gt; of &lt;SourceName&gt; to &lt;PercentOfTarget&gt; of &lt;TargetName&gt;&quot;,&quot;node&quot;:&quot;&lt;DimensionName&gt;: &lt;DimensionValue&gt;\n&lt;MeasureName&gt;: &lt;MeasureValue&gt;&quot;}' />
-                    <setting key='useNewColorFormat' value='true' />
-                    <setting key='valueColors' value='[{&quot;fieldName&quot;:&quot;sector - Agriculture&quot;,&quot;color&quot;:&quot;#59A14F&quot;},{&quot;fieldName&quot;:&quot;sector - Energy&quot;,&quot;color&quot;:&quot;#E15759&quot;},{&quot;fieldName&quot;:&quot;sector - Industrial Processes and Product Use&quot;,&quot;color&quot;:&quot;#4E79A7&quot;},{&quot;fieldName&quot;:&quot;sector - Other&quot;,&quot;color&quot;:&quot;#F28E2B&quot;},{&quot;fieldName&quot;:&quot;sector - Waste&quot;,&quot;color&quot;:&quot;#EDC948&quot;},{&quot;fieldName&quot;:&quot;gas - N2O&quot;,&quot;color&quot;:&quot;#B07AA1&quot;},{&quot;fieldName&quot;:&quot;gas - CO2&quot;,&quot;color&quot;:&quot;#9C755F&quot;},{&quot;fieldName&quot;:&quot;gas - CH4&quot;,&quot;color&quot;:&quot;#BAB0AC&quot;},{&quot;fieldName&quot;:&quot;gas - F-Gas&quot;,&quot;color&quot;:&quot;#59A14F&quot;}]' />
-                  </instance-settings>
-                  <type-settings>
-                    <dashboard />
-                  </type-settings>
-                </add-in>
-                <zone-style>
-                  <format attr='border-color' value='#000000' />
-                  <format attr='border-style' value='none' />
-                  <format attr='border-width' value='0' />
-                  <format attr='margin' value='4' />
-                </zone-style>
-              </zone>
-            </zone>
-          </zone>
-          <zone-style>
-            <format attr='border-color' value='#000000' />
-            <format attr='border-style' value='none' />
-            <format attr='border-width' value='0' />
-            <format attr='margin' value='8' />
-          </zone-style>
-        </zone>
-        <zone h='3000' id='11' type-v2='dashboard-object' w='2400' x='79200' y='1000'>
-          <button action=''>
-            <toggle-action>tabdoc:toggle-button-click-action window-id=&quot;{F93D7ADB-B521-47AE-BC1A-0DD89E6FFD9B}&quot; zone-id=&quot;11&quot; zone-ids=[9]</toggle-action>
-            <button-visual-state />
-            <button-visual-state />
-          </button>
-        </zone>
-      </zones>
-      <devicelayouts>
-        <devicelayout auto-generated='true' name='Phone'>
-          <size maxheight='700' minheight='700' sizing-mode='vscroll' />
-          <zones>
-            <zone h='100000' id='17' type-v2='layout-basic' w='100000' x='0' y='0'>
-              <zone h='98000' id='16' param='vert' type-v2='layout-flow' w='98400' x='800' y='1000'>
-                <zone forceUpdate='true' h='98000' id='10' param='[com.appsfortableau.extensions.show-me-more].[0.1.0].[https://extensions.appsfortableau.com/login/i59GWUukY7gWHm6hKCoC%2BFbxJzMkzSbw%2BvzydYMrPgtGVH265SU5hGI46sTdi2RaSRpQM2UPenrAHlbHLJRcr%2BisQ2%2B5bKibags5O791jeNX7Kk9BnTKSahUlyNR5Q6Aky6wjLNDnX86A2R%2BGvjJqg%3D%3D]' type-v2='dashboard-object' w='90500' x='800' y='1000'>
+          <zone h='98000' id='23' param='vert' type-v2='layout-flow' w='98400' x='800' y='1000'>
+            <zone h='98000' id='8' param='horz' type-v2='layout-flow' w='98400' x='800' y='1000'>
+              <zone h='98000' id='6' type-v2='layout-basic' w='98400' x='800' y='1000'>
+                <zone forceUpdate='true' h='98000' id='10' param='[com.appsfortableau.extensions.show-me-more].[0.1.0].[https://extensions.appsfortableau.com/login/i59GWUukY7gWHm6hKCoC%2BFbxJzMkzSbw%2BvzydYMrPgtGVH265SU5hGI46sTdi2RaSRpQM2UPenrAHlbHLJRcr%2BisQ2%2B5bKibags5O791jeNX7Kk9BnTKSahUlyNR5Q6Aky6wjLNDnX86A2R%2BGvjJqg%3D%3D]' type-v2='dashboard-object' w='98400' x='800' y='1000'>
                   <add-in add-in-id='com.appsfortableau.extensions.show-me-more' extension-url='https://extensions.appsfortableau.com/login/i59GWUukY7gWHm6hKCoC%2BFbxJzMkzSbw%2BvzydYMrPgtGVH265SU5hGI46sTdi2RaSRpQM2UPenrAHlbHLJRcr%2BisQ2%2B5bKibags5O791jeNX7Kk9BnTKSahUlyNR5Q6Aky6wjLNDnX86A2R%2BGvjJqg%3D%3D' extension-version='0.1.0' instance-id='AB89E31B20A949039EDA249F9E0E3ADC'>
                     <instance-settings>
                       <setting key='backgroundColor' value='#FFFFFF' />
@@ -3644,13 +3552,100 @@
                       <setting key='legendPaddingY' value='0' />
                       <setting key='legendPosition' value='&quot;right&quot;' />
                       <setting key='legendRows' value='2' />
-                      <setting key='legendTitle' value='&quot;&quot;' />
+                      <setting key='legendTitle' value='&quot;Sectors and Gasses&quot;' />
                       <setting key='legendType' value='&quot;color&quot;' />
                       <setting key='linkColor' value='#CCFF66' />
-                      <setting key='measure' value='SUM(2015)' />
+                      <setting key='measure' value='SUM(2017)' />
                       <setting key='measureFormat' value='' />
                       <setting key='measureStyle' value='{&quot;style&quot;:&quot;decimal&quot;,&quot;maximumFractionDigits&quot;:2,&quot;prefix&quot;:&quot;&quot;,&quot;suffix&quot;:&quot;&quot;,&quot;unit&quot;:&quot;&quot;,&quot;displayUnits&quot;:&quot;none&quot;,&quot;useGrouping&quot;:true}' />
-                      <setting key='memberColors' value='[{&quot;fieldName&quot;:&quot;Agriculture&quot;,&quot;color&quot;:&quot;#59A14F&quot;},{&quot;fieldName&quot;:&quot;Energy&quot;,&quot;color&quot;:&quot;#E15759&quot;},{&quot;fieldName&quot;:&quot;Industrial Processes and Product Use&quot;,&quot;color&quot;:&quot;#4E79A7&quot;},{&quot;fieldName&quot;:&quot;Other&quot;,&quot;color&quot;:&quot;#F28E2B&quot;},{&quot;fieldName&quot;:&quot;Waste&quot;,&quot;color&quot;:&quot;#EDC948&quot;},{&quot;fieldName&quot;:&quot;N2O&quot;,&quot;color&quot;:&quot;#B07AA1&quot;},{&quot;fieldName&quot;:&quot;CO2&quot;,&quot;color&quot;:&quot;#469c00&quot;},{&quot;fieldName&quot;:&quot;CH4&quot;,&quot;color&quot;:&quot;#BAB0AC&quot;},{&quot;fieldName&quot;:&quot;F-Gas&quot;,&quot;color&quot;:&quot;#59A14F&quot;}]' />
+                      <setting key='memberColors' value='[{&quot;fieldName&quot;:&quot;Agriculture&quot;,&quot;color&quot;:&quot;#a11b8f&quot;},{&quot;fieldName&quot;:&quot;Energy&quot;,&quot;color&quot;:&quot;#E15759&quot;},{&quot;fieldName&quot;:&quot;Industrial Processes and Product Use&quot;,&quot;color&quot;:&quot;#4E79A7&quot;},{&quot;fieldName&quot;:&quot;Other&quot;,&quot;color&quot;:&quot;#F28E2B&quot;},{&quot;fieldName&quot;:&quot;Waste&quot;,&quot;color&quot;:&quot;#EDC948&quot;},{&quot;fieldName&quot;:&quot;N2O&quot;,&quot;color&quot;:&quot;#B07AA1&quot;},{&quot;fieldName&quot;:&quot;CO2&quot;,&quot;color&quot;:&quot;#469c00&quot;},{&quot;fieldName&quot;:&quot;CH4&quot;,&quot;color&quot;:&quot;#BAB0AC&quot;},{&quot;fieldName&quot;:&quot;F-Gas&quot;,&quot;color&quot;:&quot;#59A14F&quot;}]' />
+                      <setting key='memberColorsSunburst' value='[]' />
+                      <setting key='outputColor' value='#CCFF66' />
+                      <setting key='scaleLegendColor' value='&quot;#59A14F&quot;' />
+                      <setting key='scaleLegendItems' value='3' />
+                      <setting key='scaleLegendOrder' value='&quot;high-low&quot;' />
+                      <setting key='selectedSheet' value='Sheet 1' />
+                      <setting key='selectedViz' value='sankey-diagram' />
+                      <setting key='sequentialColorScheme' value='[null,null,null,[&quot;#d8b365&quot;,&quot;#f5f5f5&quot;,&quot;#5ab4ac&quot;],[&quot;#a6611a&quot;,&quot;#dfc27d&quot;,&quot;#80cdc1&quot;,&quot;#018571&quot;],[&quot;#a6611a&quot;,&quot;#dfc27d&quot;,&quot;#f5f5f5&quot;,&quot;#80cdc1&quot;,&quot;#018571&quot;],[&quot;#8c510a&quot;,&quot;#d8b365&quot;,&quot;#f6e8c3&quot;,&quot;#c7eae5&quot;,&quot;#5ab4ac&quot;,&quot;#01665e&quot;],[&quot;#8c510a&quot;,&quot;#d8b365&quot;,&quot;#f6e8c3&quot;,&quot;#f5f5f5&quot;,&quot;#c7eae5&quot;,&quot;#5ab4ac&quot;,&quot;#01665e&quot;],[&quot;#8c510a&quot;,&quot;#bf812d&quot;,&quot;#dfc27d&quot;,&quot;#f6e8c3&quot;,&quot;#c7eae5&quot;,&quot;#80cdc1&quot;,&quot;#35978f&quot;,&quot;#01665e&quot;],[&quot;#8c510a&quot;,&quot;#bf812d&quot;,&quot;#dfc27d&quot;,&quot;#f6e8c3&quot;,&quot;#f5f5f5&quot;,&quot;#c7eae5&quot;,&quot;#80cdc1&quot;,&quot;#35978f&quot;,&quot;#01665e&quot;],[&quot;#543005&quot;,&quot;#8c510a&quot;,&quot;#bf812d&quot;,&quot;#dfc27d&quot;,&quot;#f6e8c3&quot;,&quot;#c7eae5&quot;,&quot;#80cdc1&quot;,&quot;#35978f&quot;,&quot;#01665e&quot;,&quot;#003c30&quot;],[&quot;#543005&quot;,&quot;#8c510a&quot;,&quot;#bf812d&quot;,&quot;#dfc27d&quot;,&quot;#f6e8c3&quot;,&quot;#f5f5f5&quot;,&quot;#c7eae5&quot;,&quot;#80cdc1&quot;,&quot;#35978f&quot;,&quot;#01665e&quot;,&quot;#003c30&quot;]]' />
+                      <setting key='sourceColor' value='#e72168' />
+                      <setting key='targetColor' value='#183C92' />
+                      <setting key='textColor' value='#ffffff' />
+                      <setting key='textColorAxis' value='#666666' />
+                      <setting key='textColorGrid' value='#666666' />
+                      <setting key='textColorHeader' value='#666666' />
+                      <setting key='textColorLinks' value='#FFFFFF' />
+                      <setting key='tooltips' value='{&quot;link&quot;:&quot;&lt;MeasureName&gt;: &lt;MeasureValue&gt;\n&lt;PercentOfSource&gt; of &lt;SourceName&gt; to &lt;PercentOfTarget&gt; of &lt;TargetName&gt;&quot;,&quot;node&quot;:&quot;&lt;DimensionName&gt;: &lt;DimensionValue&gt;\n&lt;MeasureName&gt;: &lt;MeasureValue&gt;&quot;}' />
+                      <setting key='useNewColorFormat' value='true' />
+                      <setting key='valueColors' value='[{&quot;fieldName&quot;:&quot;sector - Agriculture&quot;,&quot;color&quot;:&quot;#59A14F&quot;},{&quot;fieldName&quot;:&quot;sector - Energy&quot;,&quot;color&quot;:&quot;#E15759&quot;},{&quot;fieldName&quot;:&quot;sector - Industrial Processes and Product Use&quot;,&quot;color&quot;:&quot;#4E79A7&quot;},{&quot;fieldName&quot;:&quot;sector - Other&quot;,&quot;color&quot;:&quot;#F28E2B&quot;},{&quot;fieldName&quot;:&quot;sector - Waste&quot;,&quot;color&quot;:&quot;#EDC948&quot;},{&quot;fieldName&quot;:&quot;gas - N2O&quot;,&quot;color&quot;:&quot;#B07AA1&quot;},{&quot;fieldName&quot;:&quot;gas - CO2&quot;,&quot;color&quot;:&quot;#9C755F&quot;},{&quot;fieldName&quot;:&quot;gas - CH4&quot;,&quot;color&quot;:&quot;#BAB0AC&quot;},{&quot;fieldName&quot;:&quot;gas - F-Gas&quot;,&quot;color&quot;:&quot;#59A14F&quot;}]' />
+                    </instance-settings>
+                    <type-settings>
+                      <dashboard />
+                    </type-settings>
+                  </add-in>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                  </zone-style>
+                </zone>
+              </zone>
+            </zone>
+          </zone>
+          <zone-style>
+            <format attr='border-color' value='#000000' />
+            <format attr='border-style' value='none' />
+            <format attr='border-width' value='0' />
+            <format attr='margin' value='8' />
+          </zone-style>
+        </zone>
+        <zone h='3000' id='11' type-v2='dashboard-object' w='2400' x='79200' y='1000'>
+          <button action=''>
+            <toggle-action>tabdoc:toggle-button-click-action window-id=&quot;{F93D7ADB-B521-47AE-BC1A-0DD89E6FFD9B}&quot; zone-id=&quot;11&quot; zone-ids=[9]</toggle-action>
+            <button-visual-state />
+            <button-visual-state />
+          </button>
+        </zone>
+        <zone h='625' id='5' name='Sheet 1' show-title='false' w='1500' x='97100' y='98000' />
+      </zones>
+      <devicelayouts>
+        <devicelayout auto-generated='true' name='Phone'>
+          <size maxheight='700' minheight='700' sizing-mode='vscroll' />
+          <zones>
+            <zone h='100000' id='25' type-v2='layout-basic' w='100000' x='0' y='0'>
+              <zone h='98000' id='24' param='vert' type-v2='layout-flow' w='98400' x='800' y='1000'>
+                <zone forceUpdate='true' h='98000' id='10' param='[com.appsfortableau.extensions.show-me-more].[0.1.0].[https://extensions.appsfortableau.com/login/i59GWUukY7gWHm6hKCoC%2BFbxJzMkzSbw%2BvzydYMrPgtGVH265SU5hGI46sTdi2RaSRpQM2UPenrAHlbHLJRcr%2BisQ2%2B5bKibags5O791jeNX7Kk9BnTKSahUlyNR5Q6Aky6wjLNDnX86A2R%2BGvjJqg%3D%3D]' type-v2='dashboard-object' w='98400' x='800' y='1000'>
+                  <add-in add-in-id='com.appsfortableau.extensions.show-me-more' extension-url='https://extensions.appsfortableau.com/login/i59GWUukY7gWHm6hKCoC%2BFbxJzMkzSbw%2BvzydYMrPgtGVH265SU5hGI46sTdi2RaSRpQM2UPenrAHlbHLJRcr%2BisQ2%2B5bKibags5O791jeNX7Kk9BnTKSahUlyNR5Q6Aky6wjLNDnX86A2R%2BGvjJqg%3D%3D' extension-version='0.1.0' instance-id='AB89E31B20A949039EDA249F9E0E3ADC'>
+                    <instance-settings>
+                      <setting key='backgroundColor' value='#FFFFFF' />
+                      <setting key='colorScheme' value='[&quot;#4e79a7&quot;,&quot;#a0cbe8&quot;,&quot;#f28e2b&quot;,&quot;#ffbe7d&quot;,&quot;#59a14f&quot;,&quot;#8cd17d&quot;,&quot;#b6992d&quot;,&quot;#f1ce63&quot;,&quot;#499894&quot;,&quot;#86bcb6&quot;,&quot;#e15759&quot;,&quot;#ff9d9a&quot;,&quot;#79706e&quot;,&quot;#bab0ac&quot;,&quot;#d37295&quot;,&quot;#fabfd2&quot;,&quot;#b07aa1&quot;,&quot;#d4a6c8&quot;,&quot;#9d7660&quot;,&quot;#d7b5a6&quot;]' />
+                      <setting key='convertedToNewActions' value='true' />
+                      <setting key='dashboardActions' value='[]' />
+                      <setting key='dimensionColors' value='[{&quot;fieldName&quot;:&quot;sector&quot;,&quot;color&quot;:&quot;#59A14F&quot;},{&quot;fieldName&quot;:&quot;gas&quot;,&quot;color&quot;:&quot;#E15759&quot;}]' />
+                      <setting key='dimensions' value='[&quot;sector&quot;,&quot;gas&quot;]' />
+                      <setting key='divergingColorScheme' value='[null,null,null,[&quot;#d8b365&quot;,&quot;#f5f5f5&quot;,&quot;#5ab4ac&quot;],[&quot;#a6611a&quot;,&quot;#dfc27d&quot;,&quot;#80cdc1&quot;,&quot;#018571&quot;],[&quot;#a6611a&quot;,&quot;#dfc27d&quot;,&quot;#f5f5f5&quot;,&quot;#80cdc1&quot;,&quot;#018571&quot;],[&quot;#8c510a&quot;,&quot;#d8b365&quot;,&quot;#f6e8c3&quot;,&quot;#c7eae5&quot;,&quot;#5ab4ac&quot;,&quot;#01665e&quot;],[&quot;#8c510a&quot;,&quot;#d8b365&quot;,&quot;#f6e8c3&quot;,&quot;#f5f5f5&quot;,&quot;#c7eae5&quot;,&quot;#5ab4ac&quot;,&quot;#01665e&quot;],[&quot;#8c510a&quot;,&quot;#bf812d&quot;,&quot;#dfc27d&quot;,&quot;#f6e8c3&quot;,&quot;#c7eae5&quot;,&quot;#80cdc1&quot;,&quot;#35978f&quot;,&quot;#01665e&quot;],[&quot;#8c510a&quot;,&quot;#bf812d&quot;,&quot;#dfc27d&quot;,&quot;#f6e8c3&quot;,&quot;#f5f5f5&quot;,&quot;#c7eae5&quot;,&quot;#80cdc1&quot;,&quot;#35978f&quot;,&quot;#01665e&quot;],[&quot;#543005&quot;,&quot;#8c510a&quot;,&quot;#bf812d&quot;,&quot;#dfc27d&quot;,&quot;#f6e8c3&quot;,&quot;#c7eae5&quot;,&quot;#80cdc1&quot;,&quot;#35978f&quot;,&quot;#01665e&quot;,&quot;#003c30&quot;],[&quot;#543005&quot;,&quot;#8c510a&quot;,&quot;#bf812d&quot;,&quot;#dfc27d&quot;,&quot;#f6e8c3&quot;,&quot;#f5f5f5&quot;,&quot;#c7eae5&quot;,&quot;#80cdc1&quot;,&quot;#35978f&quot;,&quot;#01665e&quot;,&quot;#003c30&quot;]]' />
+                      <setting key='enableLegend' value='true' />
+                      <setting key='excludeValues' value='false' />
+                      <setting key='extraSettings' value='[&quot;value&quot;,&quot;input&quot;,&quot;92&quot;,&quot;3&quot;,&quot;1&quot;,&quot;62&quot;,&quot;100&quot;,&quot;sankeyCenter&quot;,&quot;0&quot;,0,&quot;inside&quot;,&quot;1&quot;,&quot;valueHighToLow&quot;,&quot;valueHighToLow&quot;,&quot;1&quot;,&quot;1&quot;]' />
+                      <setting key='filterDimension' value='[]' />
+                      <setting key='filterSheets' value='[]' />
+                      <setting key='fontFamily' value='Arial, sans-serif' />
+                      <setting key='fontSize' value='1' />
+                      <setting key='fontSizeG' value='1' />
+                      <setting key='inputColor' value='#53A9CB' />
+                      <setting key='labels' value='{&quot;fromLink&quot;:{&quot;enabled&quot;:false,&quot;content&quot;:&quot;&lt;PercentOfSource&gt;&quot;},&quot;toLink&quot;:{&quot;enabled&quot;:false,&quot;content&quot;:&quot;&lt;PercentOfTarget&gt;&quot;},&quot;node&quot;:{&quot;enabled&quot;:1,&quot;content&quot;:&quot;&lt;DimensionValue&gt;&quot;}}' />
+                      <setting key='legendColumns' value='1' />
+                      <setting key='legendPaddingX' value='0' />
+                      <setting key='legendPaddingY' value='0' />
+                      <setting key='legendPosition' value='&quot;right&quot;' />
+                      <setting key='legendRows' value='2' />
+                      <setting key='legendTitle' value='&quot;Sectors and Gasses&quot;' />
+                      <setting key='legendType' value='&quot;color&quot;' />
+                      <setting key='linkColor' value='#CCFF66' />
+                      <setting key='measure' value='SUM(2017)' />
+                      <setting key='measureFormat' value='' />
+                      <setting key='measureStyle' value='{&quot;style&quot;:&quot;decimal&quot;,&quot;maximumFractionDigits&quot;:2,&quot;prefix&quot;:&quot;&quot;,&quot;suffix&quot;:&quot;&quot;,&quot;unit&quot;:&quot;&quot;,&quot;displayUnits&quot;:&quot;none&quot;,&quot;useGrouping&quot;:true}' />
+                      <setting key='memberColors' value='[{&quot;fieldName&quot;:&quot;Agriculture&quot;,&quot;color&quot;:&quot;#a11b8f&quot;},{&quot;fieldName&quot;:&quot;Energy&quot;,&quot;color&quot;:&quot;#E15759&quot;},{&quot;fieldName&quot;:&quot;Industrial Processes and Product Use&quot;,&quot;color&quot;:&quot;#4E79A7&quot;},{&quot;fieldName&quot;:&quot;Other&quot;,&quot;color&quot;:&quot;#F28E2B&quot;},{&quot;fieldName&quot;:&quot;Waste&quot;,&quot;color&quot;:&quot;#EDC948&quot;},{&quot;fieldName&quot;:&quot;N2O&quot;,&quot;color&quot;:&quot;#B07AA1&quot;},{&quot;fieldName&quot;:&quot;CO2&quot;,&quot;color&quot;:&quot;#469c00&quot;},{&quot;fieldName&quot;:&quot;CH4&quot;,&quot;color&quot;:&quot;#BAB0AC&quot;},{&quot;fieldName&quot;:&quot;F-Gas&quot;,&quot;color&quot;:&quot;#59A14F&quot;}]' />
                       <setting key='memberColorsSunburst' value='[]' />
                       <setting key='outputColor' value='#CCFF66' />
                       <setting key='scaleLegendColor' value='&quot;#59A14F&quot;' />
@@ -3682,7 +3677,7 @@
                     <format attr='padding' value='0' />
                   </zone-style>
                 </zone>
-                <zone fixed-size='280' h='98000' id='5' is-fixed='true' name='Sheet 1' w='7900' x='91300' y='1000'>
+                <zone fixed-size='280' h='625' id='5' is-fixed='true' name='Sheet 1' show-title='false' w='1500' x='97100' y='98000'>
                   <zone-style>
                     <format attr='border-color' value='#000000' />
                     <format attr='border-style' value='none' />
@@ -3722,7 +3717,7 @@
               <zone forceUpdate='true' h='94000' id='8' param='[com.appsfortableau.extensions.show-me-more].[0.1.0].[https://extensions.appsfortableau.com/login/i59GWUukY7gWHm6hKCoC%2BFbxJzMkzSbw%2BvzydYMrPgtGVH265SU5hGI46sTdi2RaSRpQM2UPenrAHlbHLJRcr%2BisQ2%2B5bKibags5O791jeNX7Kk9BnTKSahUlyNR5Q6Aky6wjLNDnX86A2R%2BGvjJqg%3D%3D]' type-v2='dashboard-object' w='98400' x='800' y='5000'>
                 <add-in add-in-id='com.appsfortableau.extensions.show-me-more' extension-url='https://extensions.appsfortableau.com/login/i59GWUukY7gWHm6hKCoC%2BFbxJzMkzSbw%2BvzydYMrPgtGVH265SU5hGI46sTdi2RaSRpQM2UPenrAHlbHLJRcr%2BisQ2%2B5bKibags5O791jeNX7Kk9BnTKSahUlyNR5Q6Aky6wjLNDnX86A2R%2BGvjJqg%3D%3D' extension-version='0.1.0' instance-id='D6EFA72B3FDA45D5936AFC26B512CDD5'>
                   <instance-settings>
-                    <setting key='backgroundColor' value='#000000' />
+                    <setting key='backgroundColor' value='#ffffff' />
                     <setting key='colorScheme' value='[&quot;#4e79a7&quot;,&quot;#a0cbe8&quot;,&quot;#f28e2b&quot;,&quot;#ffbe7d&quot;,&quot;#59a14f&quot;,&quot;#8cd17d&quot;,&quot;#b6992d&quot;,&quot;#f1ce63&quot;,&quot;#499894&quot;,&quot;#86bcb6&quot;,&quot;#e15759&quot;,&quot;#ff9d9a&quot;,&quot;#79706e&quot;,&quot;#bab0ac&quot;,&quot;#d37295&quot;,&quot;#fabfd2&quot;,&quot;#b07aa1&quot;,&quot;#d4a6c8&quot;,&quot;#9d7660&quot;,&quot;#d7b5a6&quot;]' />
                     <setting key='convertedToNewActions' value='true' />
                     <setting key='dashboardActions' value='[]' />
@@ -3731,13 +3726,14 @@
                     <setting key='divergingColorScheme' value='[null,null,null,[&quot;#d8b365&quot;,&quot;#f5f5f5&quot;,&quot;#5ab4ac&quot;],[&quot;#a6611a&quot;,&quot;#dfc27d&quot;,&quot;#80cdc1&quot;,&quot;#018571&quot;],[&quot;#a6611a&quot;,&quot;#dfc27d&quot;,&quot;#f5f5f5&quot;,&quot;#80cdc1&quot;,&quot;#018571&quot;],[&quot;#8c510a&quot;,&quot;#d8b365&quot;,&quot;#f6e8c3&quot;,&quot;#c7eae5&quot;,&quot;#5ab4ac&quot;,&quot;#01665e&quot;],[&quot;#8c510a&quot;,&quot;#d8b365&quot;,&quot;#f6e8c3&quot;,&quot;#f5f5f5&quot;,&quot;#c7eae5&quot;,&quot;#5ab4ac&quot;,&quot;#01665e&quot;],[&quot;#8c510a&quot;,&quot;#bf812d&quot;,&quot;#dfc27d&quot;,&quot;#f6e8c3&quot;,&quot;#c7eae5&quot;,&quot;#80cdc1&quot;,&quot;#35978f&quot;,&quot;#01665e&quot;],[&quot;#8c510a&quot;,&quot;#bf812d&quot;,&quot;#dfc27d&quot;,&quot;#f6e8c3&quot;,&quot;#f5f5f5&quot;,&quot;#c7eae5&quot;,&quot;#80cdc1&quot;,&quot;#35978f&quot;,&quot;#01665e&quot;],[&quot;#543005&quot;,&quot;#8c510a&quot;,&quot;#bf812d&quot;,&quot;#dfc27d&quot;,&quot;#f6e8c3&quot;,&quot;#c7eae5&quot;,&quot;#80cdc1&quot;,&quot;#35978f&quot;,&quot;#01665e&quot;,&quot;#003c30&quot;],[&quot;#543005&quot;,&quot;#8c510a&quot;,&quot;#bf812d&quot;,&quot;#dfc27d&quot;,&quot;#f6e8c3&quot;,&quot;#f5f5f5&quot;,&quot;#c7eae5&quot;,&quot;#80cdc1&quot;,&quot;#35978f&quot;,&quot;#01665e&quot;,&quot;#003c30&quot;]]' />
                     <setting key='enableLegend' value='false' />
                     <setting key='excludeValues' value='false' />
+                    <setting key='extraSettings' value='[null,null,null,null,null,null,null,null,null,0,null,null,&quot;valueHighToLow&quot;,&quot;valueHighToLow&quot;,null,null]' />
                     <setting key='filterDimension' value='[]' />
                     <setting key='filterSheets' value='[]' />
                     <setting key='fontFamily' value='Arial, sans-serif' />
                     <setting key='fontSize' value='1' />
                     <setting key='fontSizeG' value='1' />
                     <setting key='inputColor' value='#53A9CB' />
-                    <setting key='labels' value='[]' />
+                    <setting key='labels' value='{&quot;fromLink&quot;:{&quot;enabled&quot;:0,&quot;content&quot;:&quot;&lt;PercentOfSource&gt;&quot;},&quot;toLink&quot;:{&quot;enabled&quot;:0,&quot;content&quot;:&quot;&lt;PercentOfTarget&gt;&quot;},&quot;node&quot;:{&quot;enabled&quot;:1,&quot;content&quot;:&quot;&lt;DimensionValue&gt;&quot;}}' />
                     <setting key='legendColumns' value='1' />
                     <setting key='legendPaddingX' value='0' />
                     <setting key='legendPaddingY' value='0' />
@@ -3746,17 +3742,17 @@
                     <setting key='legendTitle' value='&quot;&quot;' />
                     <setting key='legendType' value='&quot;color&quot;' />
                     <setting key='linkColor' value='#CCFF66' />
-                    <setting key='measure' value='SUM(2016)' />
+                    <setting key='measure' value='SUM(1915)' />
                     <setting key='measureFormat' value='' />
                     <setting key='measureStyle' value='{&quot;style&quot;:&quot;decimal&quot;,&quot;maximumFractionDigits&quot;:2,&quot;prefix&quot;:&quot;&quot;,&quot;suffix&quot;:&quot;&quot;,&quot;unit&quot;:&quot;&quot;,&quot;displayUnits&quot;:&quot;none&quot;,&quot;useGrouping&quot;:true}' />
-                    <setting key='memberColors' value='[]' />
-                    <setting key='memberColorsSunburst' value='[{&quot;fieldName&quot;:&quot;Agriculture&quot;,&quot;color&quot;:&quot;#59A14F&quot;},{&quot;fieldName&quot;:&quot;Energy&quot;,&quot;color&quot;:&quot;#E15759&quot;},{&quot;fieldName&quot;:&quot;Industrial Processes and Product Use&quot;,&quot;color&quot;:&quot;#4E79A7&quot;},{&quot;fieldName&quot;:&quot;Other&quot;,&quot;color&quot;:&quot;#F28E2B&quot;},{&quot;fieldName&quot;:&quot;Waste&quot;,&quot;color&quot;:&quot;#76B7B2&quot;}]' />
+                    <setting key='memberColors' value='[{&quot;fieldName&quot;:&quot;Agriculture&quot;,&quot;color&quot;:&quot;#59A14F&quot;},{&quot;fieldName&quot;:&quot;Energy&quot;,&quot;color&quot;:&quot;#E15759&quot;},{&quot;fieldName&quot;:&quot;Industrial Processes and Product Use&quot;,&quot;color&quot;:&quot;#4E79A7&quot;},{&quot;fieldName&quot;:&quot;Other&quot;,&quot;color&quot;:&quot;#F28E2B&quot;},{&quot;fieldName&quot;:&quot;Waste&quot;,&quot;color&quot;:&quot;#76B7B2&quot;},{&quot;fieldName&quot;:&quot;N2O&quot;,&quot;color&quot;:&quot;#EDC948&quot;},{&quot;fieldName&quot;:&quot;CO2&quot;,&quot;color&quot;:&quot;#B07AA1&quot;},{&quot;fieldName&quot;:&quot;CH4&quot;,&quot;color&quot;:&quot;#FF9DA7&quot;},{&quot;fieldName&quot;:&quot;F-Gas&quot;,&quot;color&quot;:&quot;#9C755F&quot;}]' />
+                    <setting key='memberColorsSunburst' value='[]' />
                     <setting key='outputColor' value='#CCFF66' />
                     <setting key='scaleLegendColor' value='&quot;#59A14F&quot;' />
                     <setting key='scaleLegendItems' value='3' />
                     <setting key='scaleLegendOrder' value='&quot;high-low&quot;' />
                     <setting key='selectedSheet' value='Sheet 2' />
-                    <setting key='selectedViz' value='sunburst' />
+                    <setting key='selectedViz' value='sankey-diagram' />
                     <setting key='sequentialColorScheme' value='[null,null,null,[&quot;#d8b365&quot;,&quot;#f5f5f5&quot;,&quot;#5ab4ac&quot;],[&quot;#a6611a&quot;,&quot;#dfc27d&quot;,&quot;#80cdc1&quot;,&quot;#018571&quot;],[&quot;#a6611a&quot;,&quot;#dfc27d&quot;,&quot;#f5f5f5&quot;,&quot;#80cdc1&quot;,&quot;#018571&quot;],[&quot;#8c510a&quot;,&quot;#d8b365&quot;,&quot;#f6e8c3&quot;,&quot;#c7eae5&quot;,&quot;#5ab4ac&quot;,&quot;#01665e&quot;],[&quot;#8c510a&quot;,&quot;#d8b365&quot;,&quot;#f6e8c3&quot;,&quot;#f5f5f5&quot;,&quot;#c7eae5&quot;,&quot;#5ab4ac&quot;,&quot;#01665e&quot;],[&quot;#8c510a&quot;,&quot;#bf812d&quot;,&quot;#dfc27d&quot;,&quot;#f6e8c3&quot;,&quot;#c7eae5&quot;,&quot;#80cdc1&quot;,&quot;#35978f&quot;,&quot;#01665e&quot;],[&quot;#8c510a&quot;,&quot;#bf812d&quot;,&quot;#dfc27d&quot;,&quot;#f6e8c3&quot;,&quot;#f5f5f5&quot;,&quot;#c7eae5&quot;,&quot;#80cdc1&quot;,&quot;#35978f&quot;,&quot;#01665e&quot;],[&quot;#543005&quot;,&quot;#8c510a&quot;,&quot;#bf812d&quot;,&quot;#dfc27d&quot;,&quot;#f6e8c3&quot;,&quot;#c7eae5&quot;,&quot;#80cdc1&quot;,&quot;#35978f&quot;,&quot;#01665e&quot;,&quot;#003c30&quot;],[&quot;#543005&quot;,&quot;#8c510a&quot;,&quot;#bf812d&quot;,&quot;#dfc27d&quot;,&quot;#f6e8c3&quot;,&quot;#f5f5f5&quot;,&quot;#c7eae5&quot;,&quot;#80cdc1&quot;,&quot;#35978f&quot;,&quot;#01665e&quot;,&quot;#003c30&quot;]]' />
                     <setting key='sourceColor' value='#e72168' />
                     <setting key='targetColor' value='#183C92' />
@@ -3765,9 +3761,9 @@
                     <setting key='textColorGrid' value='#666666' />
                     <setting key='textColorHeader' value='#ffffff' />
                     <setting key='textColorLinks' value='#FFFFFF' />
-                    <setting key='tooltips' value='{&quot;node&quot;:&quot;&lt;DimensionName&gt;: &lt;DimensionValue&gt;\n&lt;MeasureName&gt;: &lt;MeasureValue&gt;&quot;}' />
+                    <setting key='tooltips' value='{&quot;link&quot;:&quot;&lt;MeasureName&gt;: &lt;MeasureValue&gt;\n&lt;PercentOfSource&gt; of &lt;SourceName&gt; to &lt;PercentOfTarget&gt; of &lt;TargetName&gt;&quot;,&quot;node&quot;:&quot;&lt;DimensionName&gt;: &lt;DimensionValue&gt;\n&lt;MeasureName&gt;: &lt;MeasureValue&gt;&quot;}' />
                     <setting key='useNewColorFormat' value='true' />
-                    <setting key='valueColors' value='[{&quot;fieldName&quot;:&quot;sector - Agriculture&quot;,&quot;color&quot;:&quot;#EDC948&quot;},{&quot;fieldName&quot;:&quot;sector - Energy&quot;,&quot;color&quot;:&quot;#B07AA1&quot;},{&quot;fieldName&quot;:&quot;sector - Industrial Processes and Product Use&quot;,&quot;color&quot;:&quot;#FF9DA7&quot;},{&quot;fieldName&quot;:&quot;sector - Other&quot;,&quot;color&quot;:&quot;#9C755F&quot;},{&quot;fieldName&quot;:&quot;sector - Waste&quot;,&quot;color&quot;:&quot;#BAB0AC&quot;},{&quot;fieldName&quot;:&quot;gas - N2O&quot;,&quot;color&quot;:&quot;#EDC948&quot;},{&quot;fieldName&quot;:&quot;gas - CO2&quot;,&quot;color&quot;:&quot;#FF9DA7&quot;},{&quot;fieldName&quot;:&quot;gas - CH4&quot;,&quot;color&quot;:&quot;#9C755F&quot;},{&quot;fieldName&quot;:&quot;gas - F-Gas&quot;,&quot;color&quot;:&quot;#BAB0AC&quot;}]' />
+                    <setting key='valueColors' value='[{&quot;fieldName&quot;:&quot;sector - Agriculture&quot;,&quot;color&quot;:&quot;#EDC948&quot;},{&quot;fieldName&quot;:&quot;sector - Energy&quot;,&quot;color&quot;:&quot;#B07AA1&quot;},{&quot;fieldName&quot;:&quot;sector - Industrial Processes and Product Use&quot;,&quot;color&quot;:&quot;#FF9DA7&quot;},{&quot;fieldName&quot;:&quot;sector - Other&quot;,&quot;color&quot;:&quot;#9C755F&quot;},{&quot;fieldName&quot;:&quot;sector - Waste&quot;,&quot;color&quot;:&quot;#BAB0AC&quot;},{&quot;fieldName&quot;:&quot;gas - N2O&quot;,&quot;color&quot;:&quot;#EDC948&quot;},{&quot;fieldName&quot;:&quot;gas - CO2&quot;,&quot;color&quot;:&quot;#B07AA1&quot;},{&quot;fieldName&quot;:&quot;gas - CH4&quot;,&quot;color&quot;:&quot;#FF9DA7&quot;},{&quot;fieldName&quot;:&quot;gas - F-Gas&quot;,&quot;color&quot;:&quot;#9C755F&quot;}]' />
                   </instance-settings>
                   <type-settings>
                     <dashboard />
@@ -3794,8 +3790,8 @@
         <devicelayout auto-generated='true' name='Phone'>
           <size maxheight='700' minheight='700' sizing-mode='vscroll' />
           <zones>
-            <zone h='100000' id='14' type-v2='layout-basic' w='100000' x='0' y='0'>
-              <zone h='84000' id='13' param='vert' type-v2='layout-flow' w='84000' x='8000' y='8000'>
+            <zone h='100000' id='20' type-v2='layout-basic' w='100000' x='0' y='0'>
+              <zone h='84000' id='19' param='vert' type-v2='layout-flow' w='84000' x='8000' y='8000'>
                 <zone fixed-size='280' h='4000' id='3' is-fixed='true' name='Sheet 2' w='98400' x='800' y='1000'>
                   <zone-style>
                     <format attr='border-color' value='#000000' />
@@ -3808,7 +3804,7 @@
                 <zone forceUpdate='true' h='94000' id='8' param='[com.appsfortableau.extensions.show-me-more].[0.1.0].[https://extensions.appsfortableau.com/login/i59GWUukY7gWHm6hKCoC%2BFbxJzMkzSbw%2BvzydYMrPgtGVH265SU5hGI46sTdi2RaSRpQM2UPenrAHlbHLJRcr%2BisQ2%2B5bKibags5O791jeNX7Kk9BnTKSahUlyNR5Q6Aky6wjLNDnX86A2R%2BGvjJqg%3D%3D]' type-v2='dashboard-object' w='98400' x='800' y='5000'>
                   <add-in add-in-id='com.appsfortableau.extensions.show-me-more' extension-url='https://extensions.appsfortableau.com/login/i59GWUukY7gWHm6hKCoC%2BFbxJzMkzSbw%2BvzydYMrPgtGVH265SU5hGI46sTdi2RaSRpQM2UPenrAHlbHLJRcr%2BisQ2%2B5bKibags5O791jeNX7Kk9BnTKSahUlyNR5Q6Aky6wjLNDnX86A2R%2BGvjJqg%3D%3D' extension-version='0.1.0' instance-id='D6EFA72B3FDA45D5936AFC26B512CDD5'>
                     <instance-settings>
-                      <setting key='backgroundColor' value='#000000' />
+                      <setting key='backgroundColor' value='#ffffff' />
                       <setting key='colorScheme' value='[&quot;#4e79a7&quot;,&quot;#a0cbe8&quot;,&quot;#f28e2b&quot;,&quot;#ffbe7d&quot;,&quot;#59a14f&quot;,&quot;#8cd17d&quot;,&quot;#b6992d&quot;,&quot;#f1ce63&quot;,&quot;#499894&quot;,&quot;#86bcb6&quot;,&quot;#e15759&quot;,&quot;#ff9d9a&quot;,&quot;#79706e&quot;,&quot;#bab0ac&quot;,&quot;#d37295&quot;,&quot;#fabfd2&quot;,&quot;#b07aa1&quot;,&quot;#d4a6c8&quot;,&quot;#9d7660&quot;,&quot;#d7b5a6&quot;]' />
                       <setting key='convertedToNewActions' value='true' />
                       <setting key='dashboardActions' value='[]' />
@@ -3817,13 +3813,14 @@
                       <setting key='divergingColorScheme' value='[null,null,null,[&quot;#d8b365&quot;,&quot;#f5f5f5&quot;,&quot;#5ab4ac&quot;],[&quot;#a6611a&quot;,&quot;#dfc27d&quot;,&quot;#80cdc1&quot;,&quot;#018571&quot;],[&quot;#a6611a&quot;,&quot;#dfc27d&quot;,&quot;#f5f5f5&quot;,&quot;#80cdc1&quot;,&quot;#018571&quot;],[&quot;#8c510a&quot;,&quot;#d8b365&quot;,&quot;#f6e8c3&quot;,&quot;#c7eae5&quot;,&quot;#5ab4ac&quot;,&quot;#01665e&quot;],[&quot;#8c510a&quot;,&quot;#d8b365&quot;,&quot;#f6e8c3&quot;,&quot;#f5f5f5&quot;,&quot;#c7eae5&quot;,&quot;#5ab4ac&quot;,&quot;#01665e&quot;],[&quot;#8c510a&quot;,&quot;#bf812d&quot;,&quot;#dfc27d&quot;,&quot;#f6e8c3&quot;,&quot;#c7eae5&quot;,&quot;#80cdc1&quot;,&quot;#35978f&quot;,&quot;#01665e&quot;],[&quot;#8c510a&quot;,&quot;#bf812d&quot;,&quot;#dfc27d&quot;,&quot;#f6e8c3&quot;,&quot;#f5f5f5&quot;,&quot;#c7eae5&quot;,&quot;#80cdc1&quot;,&quot;#35978f&quot;,&quot;#01665e&quot;],[&quot;#543005&quot;,&quot;#8c510a&quot;,&quot;#bf812d&quot;,&quot;#dfc27d&quot;,&quot;#f6e8c3&quot;,&quot;#c7eae5&quot;,&quot;#80cdc1&quot;,&quot;#35978f&quot;,&quot;#01665e&quot;,&quot;#003c30&quot;],[&quot;#543005&quot;,&quot;#8c510a&quot;,&quot;#bf812d&quot;,&quot;#dfc27d&quot;,&quot;#f6e8c3&quot;,&quot;#f5f5f5&quot;,&quot;#c7eae5&quot;,&quot;#80cdc1&quot;,&quot;#35978f&quot;,&quot;#01665e&quot;,&quot;#003c30&quot;]]' />
                       <setting key='enableLegend' value='false' />
                       <setting key='excludeValues' value='false' />
+                      <setting key='extraSettings' value='[null,null,null,null,null,null,null,null,null,0,null,null,&quot;valueHighToLow&quot;,&quot;valueHighToLow&quot;,null,null]' />
                       <setting key='filterDimension' value='[]' />
                       <setting key='filterSheets' value='[]' />
                       <setting key='fontFamily' value='Arial, sans-serif' />
                       <setting key='fontSize' value='1' />
                       <setting key='fontSizeG' value='1' />
                       <setting key='inputColor' value='#53A9CB' />
-                      <setting key='labels' value='[]' />
+                      <setting key='labels' value='{&quot;fromLink&quot;:{&quot;enabled&quot;:0,&quot;content&quot;:&quot;&lt;PercentOfSource&gt;&quot;},&quot;toLink&quot;:{&quot;enabled&quot;:0,&quot;content&quot;:&quot;&lt;PercentOfTarget&gt;&quot;},&quot;node&quot;:{&quot;enabled&quot;:1,&quot;content&quot;:&quot;&lt;DimensionValue&gt;&quot;}}' />
                       <setting key='legendColumns' value='1' />
                       <setting key='legendPaddingX' value='0' />
                       <setting key='legendPaddingY' value='0' />
@@ -3832,17 +3829,17 @@
                       <setting key='legendTitle' value='&quot;&quot;' />
                       <setting key='legendType' value='&quot;color&quot;' />
                       <setting key='linkColor' value='#CCFF66' />
-                      <setting key='measure' value='SUM(2016)' />
+                      <setting key='measure' value='SUM(1915)' />
                       <setting key='measureFormat' value='' />
                       <setting key='measureStyle' value='{&quot;style&quot;:&quot;decimal&quot;,&quot;maximumFractionDigits&quot;:2,&quot;prefix&quot;:&quot;&quot;,&quot;suffix&quot;:&quot;&quot;,&quot;unit&quot;:&quot;&quot;,&quot;displayUnits&quot;:&quot;none&quot;,&quot;useGrouping&quot;:true}' />
-                      <setting key='memberColors' value='[]' />
-                      <setting key='memberColorsSunburst' value='[{&quot;fieldName&quot;:&quot;Agriculture&quot;,&quot;color&quot;:&quot;#59A14F&quot;},{&quot;fieldName&quot;:&quot;Energy&quot;,&quot;color&quot;:&quot;#E15759&quot;},{&quot;fieldName&quot;:&quot;Industrial Processes and Product Use&quot;,&quot;color&quot;:&quot;#4E79A7&quot;},{&quot;fieldName&quot;:&quot;Other&quot;,&quot;color&quot;:&quot;#F28E2B&quot;},{&quot;fieldName&quot;:&quot;Waste&quot;,&quot;color&quot;:&quot;#76B7B2&quot;}]' />
+                      <setting key='memberColors' value='[{&quot;fieldName&quot;:&quot;Agriculture&quot;,&quot;color&quot;:&quot;#59A14F&quot;},{&quot;fieldName&quot;:&quot;Energy&quot;,&quot;color&quot;:&quot;#E15759&quot;},{&quot;fieldName&quot;:&quot;Industrial Processes and Product Use&quot;,&quot;color&quot;:&quot;#4E79A7&quot;},{&quot;fieldName&quot;:&quot;Other&quot;,&quot;color&quot;:&quot;#F28E2B&quot;},{&quot;fieldName&quot;:&quot;Waste&quot;,&quot;color&quot;:&quot;#76B7B2&quot;},{&quot;fieldName&quot;:&quot;N2O&quot;,&quot;color&quot;:&quot;#EDC948&quot;},{&quot;fieldName&quot;:&quot;CO2&quot;,&quot;color&quot;:&quot;#B07AA1&quot;},{&quot;fieldName&quot;:&quot;CH4&quot;,&quot;color&quot;:&quot;#FF9DA7&quot;},{&quot;fieldName&quot;:&quot;F-Gas&quot;,&quot;color&quot;:&quot;#9C755F&quot;}]' />
+                      <setting key='memberColorsSunburst' value='[]' />
                       <setting key='outputColor' value='#CCFF66' />
                       <setting key='scaleLegendColor' value='&quot;#59A14F&quot;' />
                       <setting key='scaleLegendItems' value='3' />
                       <setting key='scaleLegendOrder' value='&quot;high-low&quot;' />
                       <setting key='selectedSheet' value='Sheet 2' />
-                      <setting key='selectedViz' value='sunburst' />
+                      <setting key='selectedViz' value='sankey-diagram' />
                       <setting key='sequentialColorScheme' value='[null,null,null,[&quot;#d8b365&quot;,&quot;#f5f5f5&quot;,&quot;#5ab4ac&quot;],[&quot;#a6611a&quot;,&quot;#dfc27d&quot;,&quot;#80cdc1&quot;,&quot;#018571&quot;],[&quot;#a6611a&quot;,&quot;#dfc27d&quot;,&quot;#f5f5f5&quot;,&quot;#80cdc1&quot;,&quot;#018571&quot;],[&quot;#8c510a&quot;,&quot;#d8b365&quot;,&quot;#f6e8c3&quot;,&quot;#c7eae5&quot;,&quot;#5ab4ac&quot;,&quot;#01665e&quot;],[&quot;#8c510a&quot;,&quot;#d8b365&quot;,&quot;#f6e8c3&quot;,&quot;#f5f5f5&quot;,&quot;#c7eae5&quot;,&quot;#5ab4ac&quot;,&quot;#01665e&quot;],[&quot;#8c510a&quot;,&quot;#bf812d&quot;,&quot;#dfc27d&quot;,&quot;#f6e8c3&quot;,&quot;#c7eae5&quot;,&quot;#80cdc1&quot;,&quot;#35978f&quot;,&quot;#01665e&quot;],[&quot;#8c510a&quot;,&quot;#bf812d&quot;,&quot;#dfc27d&quot;,&quot;#f6e8c3&quot;,&quot;#f5f5f5&quot;,&quot;#c7eae5&quot;,&quot;#80cdc1&quot;,&quot;#35978f&quot;,&quot;#01665e&quot;],[&quot;#543005&quot;,&quot;#8c510a&quot;,&quot;#bf812d&quot;,&quot;#dfc27d&quot;,&quot;#f6e8c3&quot;,&quot;#c7eae5&quot;,&quot;#80cdc1&quot;,&quot;#35978f&quot;,&quot;#01665e&quot;,&quot;#003c30&quot;],[&quot;#543005&quot;,&quot;#8c510a&quot;,&quot;#bf812d&quot;,&quot;#dfc27d&quot;,&quot;#f6e8c3&quot;,&quot;#f5f5f5&quot;,&quot;#c7eae5&quot;,&quot;#80cdc1&quot;,&quot;#35978f&quot;,&quot;#01665e&quot;,&quot;#003c30&quot;]]' />
                       <setting key='sourceColor' value='#e72168' />
                       <setting key='targetColor' value='#183C92' />
@@ -3851,9 +3848,9 @@
                       <setting key='textColorGrid' value='#666666' />
                       <setting key='textColorHeader' value='#ffffff' />
                       <setting key='textColorLinks' value='#FFFFFF' />
-                      <setting key='tooltips' value='{&quot;node&quot;:&quot;&lt;DimensionName&gt;: &lt;DimensionValue&gt;\n&lt;MeasureName&gt;: &lt;MeasureValue&gt;&quot;}' />
+                      <setting key='tooltips' value='{&quot;link&quot;:&quot;&lt;MeasureName&gt;: &lt;MeasureValue&gt;\n&lt;PercentOfSource&gt; of &lt;SourceName&gt; to &lt;PercentOfTarget&gt; of &lt;TargetName&gt;&quot;,&quot;node&quot;:&quot;&lt;DimensionName&gt;: &lt;DimensionValue&gt;\n&lt;MeasureName&gt;: &lt;MeasureValue&gt;&quot;}' />
                       <setting key='useNewColorFormat' value='true' />
-                      <setting key='valueColors' value='[{&quot;fieldName&quot;:&quot;sector - Agriculture&quot;,&quot;color&quot;:&quot;#EDC948&quot;},{&quot;fieldName&quot;:&quot;sector - Energy&quot;,&quot;color&quot;:&quot;#B07AA1&quot;},{&quot;fieldName&quot;:&quot;sector - Industrial Processes and Product Use&quot;,&quot;color&quot;:&quot;#FF9DA7&quot;},{&quot;fieldName&quot;:&quot;sector - Other&quot;,&quot;color&quot;:&quot;#9C755F&quot;},{&quot;fieldName&quot;:&quot;sector - Waste&quot;,&quot;color&quot;:&quot;#BAB0AC&quot;},{&quot;fieldName&quot;:&quot;gas - N2O&quot;,&quot;color&quot;:&quot;#EDC948&quot;},{&quot;fieldName&quot;:&quot;gas - CO2&quot;,&quot;color&quot;:&quot;#FF9DA7&quot;},{&quot;fieldName&quot;:&quot;gas - CH4&quot;,&quot;color&quot;:&quot;#9C755F&quot;},{&quot;fieldName&quot;:&quot;gas - F-Gas&quot;,&quot;color&quot;:&quot;#BAB0AC&quot;}]' />
+                      <setting key='valueColors' value='[{&quot;fieldName&quot;:&quot;sector - Agriculture&quot;,&quot;color&quot;:&quot;#EDC948&quot;},{&quot;fieldName&quot;:&quot;sector - Energy&quot;,&quot;color&quot;:&quot;#B07AA1&quot;},{&quot;fieldName&quot;:&quot;sector - Industrial Processes and Product Use&quot;,&quot;color&quot;:&quot;#FF9DA7&quot;},{&quot;fieldName&quot;:&quot;sector - Other&quot;,&quot;color&quot;:&quot;#9C755F&quot;},{&quot;fieldName&quot;:&quot;sector - Waste&quot;,&quot;color&quot;:&quot;#BAB0AC&quot;},{&quot;fieldName&quot;:&quot;gas - N2O&quot;,&quot;color&quot;:&quot;#EDC948&quot;},{&quot;fieldName&quot;:&quot;gas - CO2&quot;,&quot;color&quot;:&quot;#B07AA1&quot;},{&quot;fieldName&quot;:&quot;gas - CH4&quot;,&quot;color&quot;:&quot;#FF9DA7&quot;},{&quot;fieldName&quot;:&quot;gas - F-Gas&quot;,&quot;color&quot;:&quot;#9C755F&quot;}]' />
                     </instance-settings>
                     <type-settings>
                       <dashboard />
@@ -3908,26 +3905,18 @@
           </strip>
         </edge>
       </cards>
-      <viewpoint>
-        <highlight>
-          <color-one-way>
-            <field>[federated.0kqygi51637qds13vex7o1vs72hu].[none:Sector:nk]</field>
-            <field>[federated.0kqygi51637qds13vex7o1vs72hu].[none:gas:nk]</field>
-            <field>[federated.0kqygi51637qds13vex7o1vs72hu].[none:sector:nk]</field>
-            <field>[federated.0kqygi51637qds13vex7o1vs72hu].[none:source:nk]</field>
-            <field>[federated.0kqygi51637qds13vex7o1vs72hu].[sum:2015:qk]</field>
-          </color-one-way>
-        </highlight>
-      </viewpoint>
       <simple-id uuid='{0447CF86-D90A-4A43-9159-B3228D63189B}' />
     </window>
-    <window class='worksheet' maximized='true' name='Sheet 2'>
+    <window class='worksheet' name='Sheet 2'>
       <cards>
         <edge name='left'>
           <strip size='160'>
             <card type='pages' />
             <card type='filters' />
             <card type='marks' />
+          </strip>
+          <strip size='160'>
+            <card type='title' />
           </strip>
         </edge>
         <edge name='top'>
@@ -3937,9 +3926,6 @@
           <strip size='2147483647'>
             <card type='rows' />
           </strip>
-          <strip size='31'>
-            <card type='title' />
-          </strip>
         </edge>
         <edge name='right'>
           <strip size='160'>
@@ -3948,31 +3934,12 @@
           </strip>
         </edge>
       </cards>
-      <viewpoint>
-        <highlight>
-          <color-one-way>
-            <field>[federated.0kqygi51637qds13vex7o1vs72hu].[none:gas:nk]</field>
-            <field>[federated.0kqygi51637qds13vex7o1vs72hu].[none:sector:nk]</field>
-            <field>[federated.0kqygi51637qds13vex7o1vs72hu].[none:source:nk]</field>
-          </color-one-way>
-        </highlight>
-      </viewpoint>
       <simple-id uuid='{3393038A-735F-4C15-9821-1095D6BDEC13}' />
     </window>
-    <window class='dashboard' name='Dashboard 1'>
+    <window class='dashboard' maximized='true' name='Dashboard 1'>
       <viewpoints>
         <viewpoint name='Sheet 1'>
           <zoom type='entire-view' />
-          <selection-collection>
-            <node-selection select-tuples='false'>
-              <oriented-node-reference orientation='vertical'>
-                <node-reference>
-                  <axis>[federated.0kqygi51637qds13vex7o1vs72hu].[sum:2015:qk]</axis>
-                </node-reference>
-                <page-reference />
-              </oriented-node-reference>
-            </node-selection>
-          </selection-collection>
         </viewpoint>
       </viewpoints>
       <active id='-1' />
@@ -4002,178 +3969,6 @@
       gDQDkGYA0gxAmgFIMwBpBiDNAKQZgDQDkGYA0gxAmgFIMwBpBiDNAKQZgDQDkGYA0gxAmgFI
       MwBpBiDNAKQZgDQDkGYA0gxAmgFIMwBpBiDNAKQZgDQDkGYA0gxAmgFIMwBpBiDNAKR9Y+0F
       fBUOM1sAAAAASUVORK5CYII=
-    </thumbnail>
-    <thumbnail height='192' name='Dashboard 2' width='192'>
-      iVBORw0KGgoAAAANSUhEUgAAAMAAAADACAYAAABS3GwHAAAACXBIWXMAAA7DAAAOwwHHb6hk
-      AAADXUlEQVR4nO3ZT4uXVRiA4WdSzCgzQ7ByIJXaWFLmpjSovkRfM9xHtAmTTGkMJZMyHXVy
-      pJ9/UkyoaRXoJkiqWdzXtXt5OXCexc2Bc5Y2NjY2BqKe2uwNwGYSAGkCIE0ApAmAtK2Pfqxf
-      vzyXVm/Mi3v2zv27izn0xsG/XXz7zu3Z+fzOmZm5cG5lbt25P68femd2Pbvtv9sx/IseOwG+
-      +fa7OXzkyOxf3jNrq5fm9OlTc+nqjVm78uOc/PLk3Hv4+3x/bmW+OnN2FuvX5vjxT+ba+mJm
-      Zpb3vTZvv3lgzq6c35RB4EksPfoO8Nv92/P1mZXZ9tzueXBvMe8fPTpfnDgxaz/9MK8e2DeL
-      u7/Otcu35qUdD+fAhx/PzYun5r13j83MzOWL5+fC6i/z0QfHZsvSps0D/8hjJ8DVK6uz7eln
-      5sGDe7O09NevpVle3juzZfsceuvw7H35hdm9/+C8smPrLG6szfX1xcz8MZ9+9vns2rF9fr65
-      +P+ngCe05CWYMrdApAmANAGQJgDSBECaAEgTAGkCIE0ApAmANAGQJgDSBECaAEgTAGkCIE0A
-      pAmANAGQJgDSBECaAEgTAGkCIE0ApAmANAGQJgDSBECaAEgTAGkCIE0ApAmANAGQJgDSBECa
-      AEgTAGkCIE0ApAmANAGQJgDSBECaAEgTAGkCIE0ApAmANAGQJgDSBECaAEgTAGkCIE0ApAmA
-      NAGQJgDSBECaAEgTAGkCIE0ApAmANAGQJgDSBECaAEgTAGkCIE0ApAmANAGQJgDSBECaAEgT
-      AGkCIE0ApAmANAGQJgDSBECaAEgTAGkCIE0ApAmANAGQJgDSBECaAEgTAGkCIE0ApAmANAGQ
-      JgDSBECaAEgTAGkCIE0ApAmANAGQJgDSBECaAEgTAGkCIE0ApAmANAGQJgDSBECaAEgTAGkC
-      IE0ApAmANAGQJgDSBECaAEgTAGkCIE0ApAmANAGQJgDSBECaAEgTAGkCIE0ApAmANAGQJgDS
-      BECaAEgTAGkCIE0ApAmANAGQJgDSBECaAEgTAGkCIE0ApAmANAGQJgDSBECaAEgTAGkCIE0A
-      pAmANAGQJgDSBECaAEgTAGkCIE0ApAmANAGQJgDSBECaAEgTAGkCIE0ApAmANAGQJgDSBEDa
-      n/7JdHT9JgppAAAAAElFTkSuQmCC
-    </thumbnail>
-    <thumbnail height='192' name='Sheet 1' width='192'>
-      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
-      7nRYXcmCnaJ6bgPf9zFN82QhU2Wo2MdThjHXhV6Pa+78/Z8RtZ/E2if1O3+J9eJvjDfeAiyO
-      G5ij3flehPmZppGOXiyvUTy1Om5yguWM799/8pBmpx9r2zdfqnKxKu9pIL5AF8Hf/Y/b3N2p
-      x9r2z3/3pgRAAPJKsNCcBEBoTQIgtCYBEFqTAAitfWHuAonp8/f3CZqHsbY183ms6uK/oZwE
-      QMTW+sfv0Xn3n2Jtm/n6r1P+0z+ZckVnN1YAHt2/Q2A5ZJMOoTKpVlYmXZcQMzFGACIMO4WK
-      htz96BZbN782+ao0EIUB4dOfxd7eWLs2xWr0NUYAFJYKCe0sW19+i2GvCyl5VXVkwx7u3/5B
-      7M0zf/QuOJUpFjRd7vvvM3y8E2vb5Csv42xtTbmiIxYcrevZ6XRi75TJl07+nbBN2u02rusC
-      cPVCDpvNWMd5qZqh3W4TRRFKKb7/44fs1tqx9n3jxSpblyon+371lVVeOhevS7OStZ6r2Xvx
-      t4kG8cYNrRWMT9U8uPp7EAbx9o1SqFbr6JPAw7v2+7H2A4g8GPodlFJ4Xrw/OX1u//9buzWw
-      E6hvxuvxV5b13Pz4ly/H3te/fPm5fbuNBsNaLda+yUaF4afmZxzH424fNvGCz+8o/V+0sUSo
-      zF9twgAAAABJRU5ErkJggg==
-    </thumbnail>
-    <thumbnail height='192' name='Sheet 2' width='192'>
-      iVBORw0KGgoAAAANSUhEUgAAAMAAAADACAYAAABS3GwHAAAACXBIWXMAAA7DAAAOwwHHb6hk
-      AAAPIUlEQVR4nO3d628b2XnH8e+ZCzm8iaQoipYtrS97s6O92Y43yKJAAzRIiyBF0DcBCvRF
-      UaBvun9I0f+jQBG0b4ICxRZF0qZoUASLRZu9eb2+W5Z8EymKlyE5nJnTF6qU9QqbDCWSIn2e
-      DyDAomfmPJqjn8QZPjpUWmuNEIayxnUgyZGYR2MLQKfTGdehhJiasQVAvDjiOKDV8g89vr1x
-      h4YfnkBFk+OcdAHihGnNLz74Z2qnV/mPX33IlW9fJeP2uX1/yEpF4diKnSDHH3/vKhvbu7yz
-      5nDz899wc6PO8oLiSUcz7Lb5/p/8kLznnvRXMzL5DSBYWirzdLvBm5ev4DkWhfIKtaUclmVh
-      2Q6vXDhPHA5QThoFhOGQZrPJQNsUCzkKKdjtDE76yzgSNa67QO12m0KhMI5DTY3WGqXUSZeR
-      2P5UnUTNgd+kE3osLni0d55R74acW12Z6JjTmB+jAzBvNQ8Gez9l0+n0CVcyHdOYn5l4CvR4
-      8yFBFD/3mO8/fxG2s7Nz8A0wS4LOLp/fuMEgPIHbwPGAVve356TbaRF9pYwgGBDHew/sn8+o
-      16TVj9nauMftextjKaPVatNvN/j08y/wg+cvkjutNl+d2WAwIGZvPvt+lyCMxlLD7xINB9z4
-      4jqN3RaDYEir3Tr4vxm4CNZ0Ow2CLWi3drDxcAtZvKjDnZ5FqZzHVtDd3eFGq8+51dNoHVHf
-      rjPo7eIWz/DWxQsnVv2w2yXQmidbG+y0u+A3iLNl7BDyOYehhmIui5MpsVTOj3fweMj2kwZ3
-      mzuUqiXqzxpUT53CsTQPbt8iX66wkM/SaMcsl7N88tF/s1ipkFt9k063Qz9y+eKzj3HSWcJY
-      YUV94jhio96lmoGl2ik2Gz2c3jPShTKRk2P93DK/+Pdfcf711xkMhhTSinagOFtJ0x+E3Ll9
-      k1zapd0ZkC9k2NnpcGplGTsOaOx2GPZ71M69Sr/dws7n2Lp/Fzud4/6X17l09Q84U10Y7zkC
-      2o2nnDr/Ok9v/g+3oix5e4Dr5bh368uTD0A89BloDyvsMRj4OE6WC2dWaGzdw1IRA79FqFOU
-      yktE7OC3m0S2x5m1NXa2U2TL5ROt306ncRSkMjnWCnl26xbeQgnPyfLs8T0G2mXb3+biW6vj
-      H1zZeJ5H5dxL7Pot0l6GsN+lE2oWy0XcfAllhaytnSbsNVgo10i54DkKr3aaxfIijUaDfneX
-      TqCwsbFTaS68VMaNugy1g0NEqVIjv1Di8XaTMBhw6swKjpenUrJpN+tkMh6ul+Vbb6zRbzfI
-      uIqu/whLKbyMR+C3CSKNbVmUlpexgLzncv/xM1aqFZ42mqysnqOQTY3/HAG5Ypmbt7+gsrxG
-      3OqwVKkRB33OvHRu7xpAa00cx7//SL9Dp9Mhnz/GTzgds7X1iOWV0zjWdC7yjl3z79HYfkIq
-      W0RHw7E8lw2CAIBUajLfKLNm0vMD/DYAX3/OPSrf98lms2MqazrmreYgCFBK4brzd7/9KKYx
-      Pw7s3VbL5XLHOlAcx8c+xrTNW82Os/eM1ZS7QNOYn5m4CyTESZEACKNJAITRJADCaIleB9Ba
-      E4YRtgVBGOFYCq1sbEuhtca27UnXKcREJApA0O+y8bjOcjnP3YdPyKUUseXAYMhC7TS1ShGt
-      9dz9Vdi81bzfHDZPNR/HNOYnUQAcN43SIT3fp7q0zMBvooDuoE/Jsg4KPe6LadM2jpoHv/w7
-      iJP1s6Su/iVq4fSRx5rX83xU0/haEwUgCodkvCzpTJpeEFGr1cBO4a7ZxHG01zduWXP3VGgc
-      NUef/hNEQaJt1fqPsctrRx7LsvYu2ebtPB/VNL6nEgUg5WU5fXrvFbnS0Q4hxEySu0DCaBIA
-      YTQJgDCaBEAYTQIgjCYBEEaTAAijSQCE0SQAwmgSAGG0RH0MA7/NxpMGtcUcO52Y0K8TOWmy
-      tovlZVlZrky6TiEmIlEA0tkCuUyHQrFEx9+BdA5bD9nc2ODVt68QRRFRFBGG87V09rRrjuII
-      fYzxoihCKTV35/mopjE/iQLQ6+zS3NnFUtBq+VQWcyi3SLV6mjAaYtsetm0frFowL6Zds23Z
-      2McYL4r22q7n7Twf1TTmJ9HRM/kily4VAajVJlqPEFMlF8HCaBIAYTQJgDCaBEAYTQIgjCYB
-      EEaTAAijSQCE0SQAwmgSAGG0RK0Qw75Pvd0jn1LU2wNyTkzkZMh7acIoolgc/zv7CTENiQJg
-      u2nicJdmP8TSGn+oIGhy7/oWF6++K92gSceTbtCRzEw36KDXYWtri2plkU4/IudExK7H2QsX
-      6LZbFLNL0g2aZDzpBh3JTHWDfvvq1YkWIsRJkItgYTQJgDCaBEAYTQIgjCYBEEaTAAijSQCE
-      0SQAwmgSAGE0CYAw2kiNFv1ui/ZAk7EjYtvDS7lEUUgmk5lUfUJM1EgB2Hz4kKdNn1O1CugG
-      jacNzl1aJ5WKiON47roUpRt0ts1MN+i+arVKO3hG2O8SO2nK5TI9v8diIYtSau7ewXza725v
-      WzbWMcbbr3XezvNRzcw7xe8rlJd4u7x06HGl1MHHPDmJmscx3ryd56OaxvyMFABTTrwwh9wF
-      EkaTAAijSQCE0SQAwmgSAGE0CYAwmgRAGE0CIIwmARBGkwAIo43UCvFo4x71TkA+pYkdj5yb
-      QrtpTlUXJ1WfEBM1UgDCKGQYDLHzC9g65O7tW1y6+h1ZHDfpeNIOPZKZa4cuFBYIGOC5FrGz
-      wBuXrxAGPexsURbHTTKeLI47kplZHHdfqbJMqTKpUoSYPrkIFkaTAAijSQCE0SQAwmgSAGE0
-      CYAwmgRAGE0CIIwmARBGkwAIo43UClF/+ojNp00qRY/YyVBIpwmBpcXyhMoTYrJGCsDi0jJ+
-      EKPREPa4fvNL1q+9J92gSceTbtCRzFw3aNDvUKoss/t0A+16vL7+Bv1Oi4XqonSDJhlPukFH
-      MnPdoOlskTRQOHthQuUIMV1yESyMJgEQRpMACKNJAITRDgWg/uAu9+7c4mf/8nOGJ1GREFN0
-      KADZYp7PPv4EL5tD3g9GvOgOBSDodUkVK3QebtA7iYqEmKJDrwPkSmVKhR1q64t4J1GREFN0
-      6DdAa3ubp/Vn3N/YRJ9ERUJM0aEAKGUBigtrq3IRLF54hwLgplNcvfYumw/uH/rPfrfF/YeP
-      qD99xLPGDt2uT6vVnlKpQozfoWuA/NIZ8sCpH//w0MYbDx6gvAW6Guj1uPP5Iy5euSbdoEnH
-      k27QkcxcN2ixVOLxsxZkLZTjsXbuLN12i2J2SbpBk4wn3aAjmblu0OWVVZZXJlWKENMnrRDC
-      aBIAYTQJgDCaBEAYTQIgjCYBEEaTAAijSQCE0SQAwmgSAGG0kVoh+n6b7V2fcj5NbHukHRsd
-      x6S99KTqE2KiRgrA1uZDUvklnm03iHVMq77L6quv46Zc4jg+aNaaF9OuOY5jOMZ4+92g83ae
-      j2oa8zPaG2WXytx6sEk5n0LbLvlCjsFggFI5lFJY1nw9o5p2zco63niWZc3leT6qaXytI75T
-      fJUr5SqWAq0UllJorVFKHXzMk2nXrDjeePv7ztt5PqppzM9IAbAsm68H0pTJEC8mM36XCvEN
-      JADCaBIAYTQJgDCaBEAYTQIgjCYBEEaTAAijSQCE0SQAwmgjtUJEYZ/Prt+lmLOJHI98Ko22
-      XWrVxUnVJ8REjRSAm9ev02j2KZZWcQm58+UNLl37riyOm3Q8WRx3JDO3OO7FNy+z0txl4LeI
-      3QJvXL7CsN/FzpRkcdwk48niuCOZucVxAYqlIpSKk6hFiKmTi2BhNAmAMJoEQBhNAiCMJgEQ
-      RpMACKNJAITRJADCaBIAYTQJgDDaSK0QzfoTnjR7LKQhcjIUPI8w1lQWS5OqT4iJGikA2WyW
-      3ladXHoBPfT5/MsbrL/7nnSDJh1PukFHMnPdoO12h5SbIg4HaNfjtW+t02vvslCtSDdokvGk
-      G3QkM9cNWlleobI8qVKEmD65CBZGkwAIo0kAhNEkAMJoEgBhNAmAMJoEQBhNAiCMJgEQRpMA
-      CKONtjboMMAfhKQchbYcXNsijmNc151UfUJM1EgB8P0u9zefkE1ZxEoRdPtUVl+iWiqgtSaO
-      40nVORFxHE+15lhr1DHGi+MYpdTcneejmsb8jPQUqNvepbBQQh88otHx3mda62/aTYiZNdJv
-      gOLiEr1BRG5pASwX27LQOsayrIOPeTLtmi2ljjXe/r7zdp6PahrzM1IAMtk8mezXH7XHV40Q
-      U2bGjxIhvoEEQBhNAiCMJgEQRpMACKNJAITRxr7mRKPVo9sPEm2bz6QoFzLjLkGIxMYegL//
-      t4/5+Ud3E237o/de469/dGXcJQiRmBkrLIkDw60tmj/9x0TbqpTL0vt/M+GKTpYEwDBxu03v
-      179OtK1Kp+H9CRd0wkZbGnF3m0YrIvTrRE6ajGVj5wqcXq5Mqj4hJmqkABSKJTr+DsrL4eiQ
-      x1uPePmN2nOL4+53hyah4/hEF3rdr7n/Dz9Bd54k2if9g7/FOvve0cabgcVxo2i09uJZmJ9J
-      GnF59AbtToelxTy4GWqnVgnDENu2DxYyVZZKfDxlWSe60OvB4quDNvR3E+1jER255llYHDey
-      R7vzPRPzM0EjHb1UWaZ0aHXc9BjLObr//M19mp1+om3ffqXG2Zq8p4F4gS6Cf/ZfN7i12Ui0
-      7ft/dk0CIAB5JVgYTgIgjCYBEEaTAAijSQCE0V6Yu0Bi8vqffEpwN1mjo7u2RubyOxOu6Pgk
-      ACIx/6OP6Hzwr4m2zX3vD1/cADy4e5PI8cinPWJlU6sujrsuIabiCAHQWG4GpYfc+uI669e+
-      O/6qDKDjiPjxJ4m3t5YvTbAacx0hAApHxcRunvV3LjPsdSEjr6qObNjD/+lfJN4891cfgFed
-      YEGT5X/4IcOHm4m2Tb/2Kt76+oQr2uPA3rqenU4n8U65hfLBv1OuTbvdxvd9AC6eKeCylug4
-      r9RytNtttNYopfjl/95nq95OtO9bL9dYP1c92Pc7ry3xyqlcon2reee5moOX/xQ9SDZu7Cxi
-      faXmwcWfQBwl21dnUK3W3idRQHDpzxPtB6ADGIYdlFIEQbI/OX1u//9fuzVyU6jv/1GifZTj
-      PDc/4fnzifcNz59/bt/uzg7Dej3RvumdKsOvzM9R7I+7sdskiL65o/T/AMxFRVDyB4nVAAAA
-      AElFTkSuQmCC
     </thumbnail>
   </thumbnails>
   <referenced-extensions>
